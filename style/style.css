@@ -1,0 +1,620 @@
+html {
+    font-size: medium;
+    scroll-behavior: smooth;
+    font-family: symText;
+    color: aliceblue;
+    background-color: black;
+    font-size: large;
+}
+
+/*-----------------ANIMACIONES------------------*/
+@keyframes fondo {
+    0% {
+        filter: hue-rotate(360deg)
+    }
+
+    100% {
+        filter: hue-rotate(300deg)
+    }
+}
+
+@keyframes texto {
+    0% {
+        color: rgb(215, 0, 0);
+    }
+
+    50% {
+        color: rgb(72, 165, 72);
+    }
+
+    100% {
+        color: rgb(42, 132, 192);
+    }
+}
+
+/* @keyframes example {
+    0%   {left:0px; top:0px;}
+    25%  {left:200px; top:0px;}
+    50%  {left:200px; top:200px;}
+    75%  {left:0px; top:200px;}
+    100% {left:0px; top:0px;}
+} 
+
+#j{
+    animation: example 5s linear 2s infinite alternate;
+} */
+
+@font-face {
+    font-family: symText;
+    src: url(../style/Symtext.ttf);
+}
+
+.fondo {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 12vh;
+    z-index: -1;
+    animation: fondo 5s linear 0s infinite alternate;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    height: fit-content;
+}
+
+/*----------------------NAVEGADOR----------------------*/
+nav {
+    display: flex;
+    justify-content: space-around;
+    position: sticky;
+    top: 0;
+    flex-direction: row;
+    background-color: rgb(42, 52, 97);
+    height: 13vh;
+    z-index: 100;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+}
+
+nav div {
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+    width: 20vw;
+}
+
+nav li {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    color: rgb(223, 232, 255);
+    text-align: center;
+    font-size: large;
+}
+
+nav a {
+    align-self: center;
+    text-decoration: none;
+    color: azure;
+}
+
+nav li:hover {
+    color: rgb(146, 227, 158);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: rgb(21, 26, 49);
+    min-width: 20vw;
+    z-index: 1;
+    right: 0;
+    top: 100%;
+}
+
+.dropdown-menu a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+}
+
+.dropdown-menu a i {
+    margin-right: 8px;
+}
+
+.dropdown-item li {
+    width: 100%;
+    justify-content: center;
+}
+
+.user-profile:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-item:hover {
+    color: rgb(218, 238, 255);
+    background-color: rgb(44, 49, 75);
+}
+
+/*----------------------MAIN----------------------*/
+main {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    min-height: 69vh;
+}
+
+h1,
+h2 {
+    text-shadow: 2px 2px 3px rgb(0, 0, 0);
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    width: 90vw;
+    height: fit-content;
+    background-color: rgba(90, 90, 92, 0.719);
+    margin: 2vw;
+    border-radius: 2vh;
+}
+
+.sobreMi {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    height: fit-content;
+    width: 90vw;
+    margin: 2vh;
+    margin-top: 6vh;
+    background-color: rgba(90, 90, 92, 0.719);
+    border-radius: 2vh;
+}
+
+.sobreMi div {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    width: 50%;
+    margin: 1vh;
+    text-align: center;
+}
+
+.sobreMi p {
+    width: 80%;
+    font-size: large;
+    text-shadow: 2px 2px 3px rgb(0, 0, 0);
+}
+
+.sobreMi h1 {
+    width: 100%;
+}
+
+.sobreMi h2 {
+    animation: fondo 5s linear 0s infinite alternate;
+    color: rgb(124, 220, 241);
+}
+
+section h1 {
+    font-size: 7vh;
+    width: 100%;
+    text-align: center;
+}
+
+section .tablero {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+#skills h2.title {
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+}
+
+#edu {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#edu h1 {
+    font-size: xx-large;
+}
+
+.sect {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    background-color: #8b8b8b5f;
+    margin: 2vh;
+    border-radius: 2vh;
+}
+
+.sect h3 span {
+    color: rgb(124, 220, 241);
+    animation: fondo 5s linear 0s infinite alternate;
+    text-shadow: 2px 2px 3px rgb(0, 0, 0);
+}
+
+.sect a:hover {
+    filter: contrast(80%) drop-shadow(10px 10px 15px rgba(25, 25, 26, 0.906));
+
+}
+
+.sobreMi div {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    width: 50%;
+    margin: 1vh;
+    text-align: center;
+}
+
+.set {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80vw;
+    margin-bottom: 4vh;
+}
+
+#idiom {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    width: 30%;
+}
+
+#program {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    width: 70%;
+}
+
+.skill {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+
+    height: 30vh;
+    min-height: fit-content;
+    width: 30vh;
+    margin: 2vh;
+    padding-bottom: 4vh;
+
+    border-radius: 2vh;
+    background-color: #8b8b8b7d;
+}
+
+.skill h1 {
+    width: 30vh;
+}
+
+a h1 {
+    animation: texto 10s linear 0s infinite alternate;
+    text-align: center;
+    width: 100%;
+    margin: 2vh;
+    margin-top: 6vh;
+    border-radius: 2vh;
+    background-color: #8b8b8b7d;
+}
+
+a h1:hover {
+    background-color: #8b8b8bbb;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+
+.proy {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    height: fit-content;
+    width: 70vh;
+    margin: 2vh;
+    border-radius: 2vh;
+    background-color: #8b8b8b7d;
+    padding-bottom: 4vh;
+}
+
+.proy a {
+    margin: 1vh;
+}
+
+.proy img {
+    height: 100%;
+    width: 90%;
+    min-width: 60vh;
+    border-radius: 1vw;
+}
+
+.proy img:hover {
+    box-shadow: 10px 10px 15px rgb(54, 58, 55);
+    margin: 0;
+}
+
+#otros {
+    color: aliceblue;
+    width: 100%;
+    text-align: center;
+    margin: 4vh;
+    font-size: larger;
+    text-shadow: 3px 3px 6px rgb(0, 0, 0);
+}
+
+#otros:hover {
+    text-shadow: 3px 3px 6px rgb(166, 166, 166);
+    color: rgb(42, 52, 97);
+}
+
+
+/*-------------FILTER-------------*/
+
+.filterbtn {
+    background-color: #4586b4;
+    color: white;
+    padding: 16px;
+    width: 10vw;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 2vh;
+    font-family: symText;
+}
+
+.filter {
+    position: relative;
+    display: block;
+    flex-wrap: wrap;
+    margin: 1vh;
+}
+
+.filter-content {
+    display: none;
+    position: absolute;
+    background-color: #cdf8ff99;
+    width: 15vw;
+    z-index: 1;
+    border-radius: 1vh;
+}
+
+.filter-content form {
+    display: grid;
+    grid-template-columns: 80%;
+    grid-template-rows: 20% 20% 20%;
+    gap: 0.5vw;
+    justify-content: center;
+    width: 15vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+.filter-content form select {
+    background-color: #6395b98b;
+    font-family: symText;
+    border: 0px;
+    border-radius: 1vh;
+}
+
+.filter-content form select:hover {
+    cursor: pointer;
+    background-color: #48779a8b;
+}
+
+.type {
+    grid-row: 1;
+}
+
+.order {
+    grid-row: 2;
+}
+.filter-content form #submit {
+    grid-row: 3;
+    border-radius: 1vh;
+    background-color: rgb(33, 227, 150);
+    color: aliceblue;
+    border: 1px solid rgb(90, 90, 90);
+    font-family: symText;
+}
+
+.filter-content form #submit:hover {
+    background-color: rgb(17, 125, 82);
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.filter:hover .filter-content {
+    display: block;
+}
+
+.filter:hover .filterbtn {
+    background-color: #305e7e;
+    font-weight: 800;
+}
+
+.up {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    position: sticky;
+
+    bottom: 0;
+    left: 100vw;
+
+    height: 8vh;
+    width: 8vh;
+    padding: 0.5vh;
+    margin: 2vh;
+
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    background-color: rgb(47, 143, 105);
+
+    z-index: 5;
+}
+
+.up:hover {
+    background-color: rgb(28, 110, 96);
+}
+
+
+/*----------------CARDS-----------------*/
+.card {
+    display: flex;
+    align-items: center;
+    min-height: 50vh;
+    height: fit-content;
+    min-width: fit-content;
+    width: 60vw;
+    padding: 2vh;
+    margin: 2vh;
+    border-radius: 2vh;
+    color: aliceblue;
+    background-color: rgba(130, 130, 130, 0.705);
+
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+}
+
+.card .title {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    width: 25%;
+}
+
+.card .content {
+    width: 75%;
+}
+
+.card h1,
+.card p {
+    text-align: center;
+}
+
+.card a {
+    color: rgb(203, 250, 255);
+}
+
+.card a:hover {
+    color: rgb(84, 206, 222);
+}
+
+.card img {
+    width: 90%;
+    min-width: 60vh;
+    border-radius: 1vw;
+    padding: 8px;
+}
+
+.borde {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 3px dashed rgb(160, 164, 174);
+    width: 80vw;
+    padding: 2vw;
+}
+
+.web img:hover {
+    box-shadow: 10px 10px 15px rgb(54, 54, 58);
+    background-color: rgb(160, 160, 160);
+    border: 3px solid rgb(100, 100, 100);
+    padding: 5px;
+}
+
+.card li {
+    list-style: circle;
+    padding: 1vh;
+}
+
+/*----------------------FOOTER----------------------*/
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    height: 20vh;
+    flex-wrap: wrap;
+
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background-color: rgb(49, 52, 65);
+    color: aliceblue;
+}
+
+footer p {
+    color: aliceblue;
+}
+
+footer .text div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(223, 232, 255);
+    text-align: center;
+    font-size: large;
+    width: 100%;
+}
+
+.info {
+    display: flex;
+    width: 100%;
+    height: 0;
+    margin: 0px;
+}
+
+footer .info div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: rgb(42, 52, 97);
+    text-align: center;
+    font-size: large;
+    width: 100%;
+}
+
+footer img#git {
+    filter: brightness(600%);
+}
+
+footer img:hover#git {
+    filter: brightness(400%);
+}
+
+footer img:hover {
+    filter: brightness(80%);
+}
+
+footer h2 {
+    text-indent: 5vw;
+    width: 100%;
+}
